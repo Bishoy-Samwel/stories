@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     # @posts = Post.all
-    @pagy, @posts = pagy(Post.all, items: 2)
+    @pagy, @posts = pagy(Post.order(avg_rate: :desc), items: 2)
     render json: @posts
   end
 
