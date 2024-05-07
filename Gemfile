@@ -45,3 +45,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "pagy", "~> 8.4"

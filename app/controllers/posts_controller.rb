@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show update destroy ]
-
+  include Pagy::Backend
   # GET /posts
   def index
-    @posts = Post.all
-
+    # @posts = Post.all
+    @pagy, @posts = pagy(Post.all, items: 2)
     render json: @posts
   end
 
