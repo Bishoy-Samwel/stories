@@ -20,7 +20,7 @@ user3 = User.create(username: Faker::Lorem.name)
   Post.create(user_id:, title:, body:)
 end
 
-20000.times do |i|
+20001.times do |i|
   user_id = rand(1..3)
   post_id = rand(0..50000)
   rate = rand(1..5)
