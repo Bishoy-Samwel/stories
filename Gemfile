@@ -47,3 +47,4 @@ end
 
 
 gem "pagy", "~> 8.4"
+gem 'faker'
